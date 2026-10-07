@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOIST GYM - The Ultimate Iron Forge</title>
+  
+  <!-- مسار الفافيكون (Favicon) - حط اسم أو مسار صورتك هنا -->
+<!-- خدعة كسر الكاش ?v=1 بتجبر المتصفح يحمل الأيقونة الجديدة فوراً -->
+<link rel="icon" type="image/png" href="favicon.png?v=1">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.png?v=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Teko:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+
+  <!-- 1. شاشة الرزعة والانترو السينمائية -->
+  <div class="intro-overlay" id="introOverlay">
+    <canvas id="dustCanvas"></canvas>
+    <div class="impact-container">
+      <h1 class="slam-word" id="wordHoist">HOIST</h1>
+      <h1 class="slam-word" id="wordGym">GYM</h1>
+      <p class="tagline" id="tagline">FORGE YOUR LEGACY</p>
+    </div>
+  </div>
+
+  <!-- 2. شريط التنقل العلوي -->
+  <header class="navbar">
+    <a href="#" class="logo">HOIST<span>GYM</span></a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">الرئيسية</a></li>
+      <li><a href="#about">عن الصالة</a></li>
+      <li><a href="#gallery">معرض الأجهزة</a></li>
+      <li><a href="#programs">البرامج</a></li>
+      <li><a href="#trainers">المدربين</a></li>
+      <li><a href="#memberships">الاشتراكات</a></li>
+      <li><a href="#faq">الأسئلة الشائعة</a></li>
+    </ul>
+  </header>
+
+  <!-- 3. الواجهة الرئيسية (Hero) مع فيديو عالي الجودة في الخلفية -->
+  <section class="hero" id="hero">
+    
+    <!-- حاوية الفيديو المحلي -->
+    <div class="video-background">
+      <video autoplay muted loop playsinline preload="auto" id="bgVideo">
+        <!-- مسار ملف الفيديو المحلي الخاص بك -->
+        <source src="hero-video.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video>
+      <!-- طبقة تظليل سينمائية تبرز النصوص بدقة دون التأثير على جودة الفيديو -->
+      <div class="video-overlay"></div>
+    </div>
+
+    <!-- النصوص والأزرار التفاعلية فوق الفيديو -->
+    <div class="hero-content">
+      <span class="hero-tag">الأقوى بدون منازع في مصر</span>
+      <h1>هنا تُصنع القوة.. لا مكان للأعذار</h1>
+      <p>صالة ألعاب حديد مجهزة بالكامل بأحدث معدات Hoist Fitness العالمية، مدربين دوليين، ومساحة تدريب مخصصة لبناء الأجسام وتحطيم الأرقام القياسية.</p>
+      <div class="hero-buttons">
+        <a href="#memberships" class="btn-primary">اشترك الآن</a>
+        <a href="#gallery" class="btn-outline">جولة في الصالة</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- شريط الإحصائيات -->
+  <section class="stats-strip">
+    <div class="stat-box">
+      <div class="num">2500+</div>
+      <p>عضو نشط</p>
+    </div>
+    <div class="stat-box">
+      <div class="num">180+</div>
+      <p>جهاز ومعدة أولمبية</p>
+    </div>
+    <div class="stat-box">
+      <div class="num">24/7</div>
+      <p>مفتوح طوال اليوم</p>
+    </div>
+    <div class="stat-box">
+      <div class="num">15+</div>
+      <p>بطل ومدرب معتمد</p>
+    </div>
+  </section>
+
+  <!-- 4. مميزات الجيم -->
+  <section class="section" id="about">
+    <div class="section-title">
+      <h2>لماذا <span>HOIST GYM</span> هو الأفضل؟</h2>
+      <p>تجربة تدريبية متكاملة مصممة لأصحاب الأداء العالي</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <svg class="card-icon-svg" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 4l7.5 13h-15L12 6z"/></svg>
+        <h3>أحدث أجهزة HOIST ROC-IT</h3>
+        <p>معدات متطورة تحاكي الحركة البيوميكانيكية الطبيعية للجسم لتوفير أقصى عزل عضلي وأمان تام للمفاصل.</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon-svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+        <h3>بيئة أبطال تحفيزية</h3>
+        <p>صوت الحديد والموسيقى الحماسية وإضاءة سينمائية تشعل طاقتك وتخليك تطلع أقصى ما عندك في كل جولة.</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon-svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        <h3>متاح 24/7 دون توقف</h3>
+        <p>تمرن في أي وقت يناسب جدولك اليومي، الصالة مفتوحة على مدار 24 ساعة بأعلى درجات الأمان والخدمة.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. معرض صور الصالة والأجهزة -->
+  <section class="section" id="gallery" style="background: #0d0d0d; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="section-title">
+      <h2>معرض <span>الأجهزة والصالة</span></h2>
+      <p>ألقِ نظرة على التجهيزات والمساحات المصممة لأقصى أداء</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop" alt="منطقة الأوزان الحرة">
+        <div class="gallery-overlay">
+          <h4>منطقة الأوزان الحرة والدمبلز</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1000&auto=format&fit=crop" alt="أجهزة Hoist">
+        <div class="gallery-overlay">
+          <h4>أجهزة HOIST عزل حركة طبيعية</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1000&auto=format&fit=crop" alt="منصات الديدليفت">
+        <div class="gallery-overlay">
+          <h4>منصات رفع الأثقال الأولمبية</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1000&auto=format&fit=crop" alt="الكارديو">
+        <div class="gallery-overlay">
+          <h4>منطقة الكارديو وأجهزة السير المتقدمة</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1000&auto=format&fit=crop" alt="الكروس فيت">
+        <div class="gallery-overlay">
+          <h4>قاعة الـ Cross-Fit والتدريب الوظيفي</h4>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1000&auto=format&fit=crop" alt="الاستشفاء">
+        <div class="gallery-overlay">
+          <h4>منطقة الاستشفاء والراحة</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. البرامج التدريبية -->
+  <section class="section" id="programs">
+    <div class="section-title">
+      <h2>برامجنا <span>التدريبية</span></h2>
+      <p>برامج علمية مدروسة لتحقيق أهدافك بأسرع وقت</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <svg class="card-icon-svg" viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>
+        <h3>كمال الأجسام (Hypertrophy)</h3>
+        <p>تضخيم وبناء عضلات صافية عبر خطط عزل دقيقة، دروب سيتس، وزيادة الحمل التدريبي التدريجي.</p>
+      </div>
+      <div class="card featured">
+        <div class="badge-top">الأكثر طلباً</div>
+        <svg class="card-icon-svg" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        <h3>باورليفتنج وقوة خالصة</h3>
+        <p>كسر الأرقام القياسية في الـ Squat و Bench Press و Deadlift على منصات أولمبية مجهزة خصيصاً.</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon-svg" viewBox="0 0 24 24"><path d="M12 2c1.1 0 2 .9 2 2v1.1C17.61 5.57 20.5 8.46 20.9 12H22c0 5.52-4.48 10-10 10S2 17.52 2 12h1.1C3.5 8.46 6.39 5.57 10 5.1V4c0-1.1.9-2 2-2z"/></svg>
+        <h3>حرق الدهون و Cross-Training</h3>
+        <p>دوائر تدريبية مكثفة (HIIT) لرفع معدل الحرق ورفع كفاءة القلب والرئتين وسرعة الاستشفاء.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. المدربين -->
+  <section class="section" id="trainers" style="background: #0d0d0d; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="section-title">
+      <h2>فريق <span>المدربين</span></h2>
+      <p>نخبة من الرياضيين المحترفين لقيادتك نحو قمة مستواك</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <svg class="card-icon-svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        <h3>كابتن أحمد </h3>
+        <p style="color: var(--primary); font-weight: bold; margin-bottom: 8px;">بطل رفع أثقال وباورليفتنج</p>
+        <p>خبرة 12 عاماً في زيادة الأوزان، بناء القوة الانفجارية، وتصحيح زوايا المفاصل والأداء الحركي.</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon-svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        <h3>كابتن عمر الحديدي</h3>
+        <p style="color: var(--primary); font-weight: bold; margin-bottom: 8px;">مدرب كمال أجسام معتمد ISSA</p>
+        <p>متخصص في التضخيم العضلي والتجهيز لبطولات الفيزيك وأنظمة الـ Body Recomposition الحديثة.</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon-svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        <h3>د. سارة التغذية</h3>
+        <p style="color: var(--primary); font-weight: bold; margin-bottom: 8px;">أخصائية تغذية رياضيين</p>
+        <p>تصميم برامج غذائية محسوبة السعرات والماكروز بدقة لتحقيق النتيجة بدون حرمان أو بطء استشفاء.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. باقات الاشتراكات -->
+  <section class="section" id="memberships">
+    <div class="section-title">
+      <h2>اختر <span>باقتك</span> وابدأ فوراً</h2>
+      <p>كل الباقات تشمل كافة خدمات الجيم بالكامل والفرق فقط في عدد الحصص التدريبية</p>
+    </div>
+    <div class="grid-3">
+      
+      <!-- الباقة الأولى: 12 حصة -->
+      <div class="card">
+        <h3>باقة 12 حصة</h3>
+        <p class="sessions-badge">12 حصة تدريبية</p>
+        <div class="price">650 <span>ج.م / شهر</span></div>
+        <ul class="features-list">
+          <li><span>✓</span> <strong>12 حصة تدريبية</strong> صالحة لمدة شهر</li>
+          <li><span>✓</span> دخول غير محدود 24/7 طوال فترة الاشتراك</li>
+          <li><span>✓</span> استخدام كافة أجهزة الحديد والكارديو</li>
+          <li><span>✓</span> جلسة قياس InBody مجاناً</li>
+          <li><span>✓</span> غرف تبديل ملابس وخزائن مؤمنة</li>
+        </ul>
+        <a href="register.html?plan=باقة%2012%20حصة%20(شهر)&price=650" class="btn-outline" style="width: 100%;">اشترك الآن</a>
+      </div>
+
+      <!-- الباقة الثانية: 24 حصة -->
+      <div class="card featured">
+        <div class="badge-top">الخيار الشائع</div>
+        <h3>باقة 24 حصة</h3>
+        <p class="sessions-badge">24 حصة تدريبية</p>
+        <div class="price">1200 <span>ج.م / شهرين</span></div>
+        <ul class="features-list">
+          <li><span>✓</span> <strong>24 حصة تدريبية</strong> صالحة لمدة شهرين</li>
+          <li><span>✓</span> دخول غير محدود 24/7 طوال فترة الاشتراك</li>
+          <li><span>✓</span> استخدام كافة أجهزة الحديد والكارديو</li>
+          <li><span>✓</span> جلسة قياس InBody مجاناً</li>
+          <li><span>✓</span> غرف تبديل ملابس وخزائن مؤمنة</li>
+        </ul>
+        <a href="register.html?plan=باقة%2024%20حصة%20(شهرين)&price=1200" class="btn-primary" style="width: 100%;">اشترك الآن</a>
+      </div>
+
+      <!-- الباقة الثالثة: 36 حصة -->
+      <div class="card">
+        <h3>باقة 36 حصة</h3>
+        <p class="sessions-badge">36 حصة تدريبية</p>
+        <div class="price">1650 <span>ج.م / 3 شهور</span></div>
+        <ul class="features-list">
+          <li><span>✓</span> <strong>36 حصة تدريبية</strong> صالحة لمدة 3 شهور</li>
+          <li><span>✓</span> دخول غير محدود 24/7 طوال فترة الاشتراك</li>
+          <li><span>✓</span> استخدام كافة أجهزة الحديد والكارديو</li>
+          <li><span>✓</span> جلسة قياس InBody مجاناً</li>
+          <li><span>✓</span> غرف تبديل ملابس وخزائن مؤمنة</li>
+        </ul>
+        <a href="register.html?plan=باقة%2036%20حصة%20(3%20شهور)&price=1650" class="btn-outline" style="width: 100%;">اشترك الآن</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. الأسئلة الشائعة -->
+  <section class="section" id="faq" style="background: #0d0d0d; border-top: 1px solid var(--border-color);">
+    <div class="section-title">
+      <h2>الأسئلة <span>الشائعة</span></h2>
+      <p>كل ما تحتاج معرفته قبل الانضمام</p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">هل الجيم مفتوح 24 ساعة يومياً؟ <span>+</span></div>
+        <div class="accordion-body">نعم! الصالة مفتوحة 24 ساعة طوال أيام الأسبوع بدون انقطاع، مع تواجد مدربين وأفراد أمن ومشرفين طوال الوقت.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">ما الفرق بين الباقات؟ <span>+</span></div>
+        <div class="accordion-body">جميع الباقات تشمل كامل مميزات الجيم بالتساوي، والفرق الوحيد هو عدد الحصص التدريبية ومدة صلاحية الباقة.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">ما هو كارت الدخول ورسومه؟ <span>+</span></div>
+        <div class="accordion-body">كارت الدخول الذكي مخصص لفتح بوابات الجيم الإلكترونية ومسجل به بيانات عضويتك واشتراكك، ويتم استخراجه لمرة واحدة برسم 25 ج.م فقط.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. الفوتر -->
+  <footer>
+    <div class="footer-bottom">
+      <a href="#" class="logo">HOIST<span>GYM</span></a>
+      <p>جميع الحقوق محفوظة © 2026 HOIST GYM - مصنع الأبطال والقوة</p>
+      <p style="margin-top: 6px; font-size: 0.9rem; color: #666;">العنوان: شارع البطل، القاهرة | خدمة العملاء: +201207878060</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

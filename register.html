@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOIST GYM - استمارة الاشتراك</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Teko:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* تنسيقات خاصة بصفحة الاستمارة المستقلة */
+    .register-page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 1.5rem;
+      background: radial-gradient(circle at center, #161616 0%, #080808 100%);
+    }
+    .register-container {
+      background: #111;
+      border: 2px solid var(--primary);
+      box-shadow: 0 0 45px rgba(255, 230, 0, 0.25);
+      border-radius: 10px;
+      width: 100%;
+      max-width: 760px;
+      padding: 2.5rem;
+    }
+    .instructions-box {
+      background: rgba(255, 230, 0, 0.08);
+      border: 1.5px dashed var(--primary);
+      border-radius: 6px;
+      padding: 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .instructions-box h4 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .instructions-box p {
+      color: #ddd;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .back-home-btn {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--text-gray);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .back-home-btn:hover {
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-page">
+    <div class="register-container">
+      
+      <a href="index.html" class="back-home-btn">← العودة للرئيسية</a>
+
+      <div class="modal-header">
+        <h2>استمارة <span>عضوية HOIST GYM</span></h2>
+        <p>أدخل بياناتك وسيتم توجيهك فوراً لرقم الواتساب الرسمي لتأكيد الحجز</p>
+      </div>
+
+      <form id="standaloneForm" class="contact-form">
+        
+        <!-- الباقة المحددة تلقائياً من الرابط -->
+        <div class="form-group selected-plan-banner">
+          <label>الباقة المختارة:</label>
+          <input type="text" id="selectedPlan" readonly value="باقة 12 حصة (شهر)">
+          <input type="hidden" id="selectedBasePrice" value="650">
+        </div>
+
+        <!-- البيانات الشخصية -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>الاسم رباعي :</label>
+            <input type="text" id="applicantName" placeholder="" required>
+          </div>
+          <div class="form-group">
+            <label>رقم الهاتف / واتساب:</label>
+            <input type="tel" id="applicantPhone" placeholder="010XXXXXXXX" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>الهدف التدريبي:</label>
+            <select id="applicantGoal">
+              <option value="تضخيم وبناء عضلات (Hypertrophy)">تضخيم وبناء عضلات (Hypertrophy)</option>
+              <option value="تنشيف وحرق دهون (Fat Loss)">تنشيف وحرق دهون (Fat Loss)</option>
+              <option value="زيادة قوة وباورليفتنج (Powerlifting)">زيادة قوة وباورليفتنج (Powerlifting)</option>
+              <option value="لياقة بدنية عامة وصحة">لياقة بدنية عامة وصحة</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>المستوى الرياضي الحالي:</label>
+            <select id="applicantLevel">
+              <option value="مبتدئ (أول مرة في الجيم)">مبتدئ (أول مرة في الجيم)</option>
+              <option value="متوسط (سنة إلى سنتين)">متوسط (سنة إلى سنتين)</option>
+              <option value="متقدم / بطل رياضي">متقدم / بطل رياضي</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- الأيام المفضلة للتمرين -->
+        <div class="form-group">
+          <label>الأيام المفضلة للتمرين بالأسبوع:</label>
+          <div class="days-selector">
+            <label class="day-chip"><input type="checkbox" name="days" value="السبت"> السبت</label>
+            <label class="day-chip"><input type="checkbox" name="days" value="الأحد"> الأحد</label>
+            <label class="day-chip"><input type="checkbox" name="days" value="الاثنين"> الاثنين</label>
+            <label class="day-chip"><input type="checkbox" name="days" value="الثلاثاء"> الثلاثاء</label>
+            <label class="day-chip"><input type="checkbox" name="days" value="الأربعاء"> الأربعاء</label>
+            <label class="day-chip"><input type="checkbox" name="days" value="الخميس"> الخميس</label>
+            <label class="day-chip"><input type="checkbox" name="days" value="الجمعة"> الجمعة</label>
+          </div>
+        </div>
+
+        <!-- خيار الدايت (+500 ج.م) -->
+        <div class="diet-option-box">
+          <div class="diet-header">
+            <div>
+              <span class="diet-title">إضافة نظام غذائي مخصص (Diet Plan)</span>
+              <p class="diet-desc">برنامج غذائي محسوب الماكروز والسعرات من أخصائي تغذية (+500 ج.م)</p>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="dietAddon" onchange="calcTotal()">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- تفاصيل الحساب المالي الإجمالي -->
+        <div class="price-breakdown-card">
+          <div class="breakdown-row">
+            <span>قيمة الباقة المختارة:</span>
+            <span id="displayBasePrice">650 ج.م</span>
+          </div>
+          <div class="breakdown-row">
+            <span>رسوم استخراج كارت الدخول الذكي:</span>
+            <span>+25 ج.م</span>
+          </div>
+          <div class="breakdown-row" id="dietRow" style="display: none;">
+            <span>نظام غذائي مخصص:</span>
+            <span>+500 ج.م</span>
+          </div>
+          <div class="breakdown-total">
+            <span>المبلغ الإجمالي المطلوب تحويله:</span>
+            <span id="displayTotalPrice" class="total-amount">675 ج.م</span>
+          </div>
+        </div>
+
+        <!-- بيانات وحسابات الدفع -->
+        <div class="payment-instructions">
+          <h3>طرق التحويل المعتمدة</h3>
+          <p>يرجى تحويل <strong>المبلغ الإجمالي المطلوب</strong> عبر إحدى الوسائل التالية:</p>
+
+          <div class="payment-boxes">
+            <!-- انستا باي -->
+            <div class="pay-box">
+              <div class="pay-title">حساب إنستاباي (InstaPay)</div>
+              <div class="pay-val">hoistgym@instapay</div>
+              <a href="https://ipn.eg" target="_blank" class="pay-link-btn">رابط إنستاباي</a>
+              <button type="button" class="copy-btn" onclick="copyValue('hoistgym@instapay', this)">نسخ الحساب</button>
+            </div>
+
+            <!-- فودافون كاش -->
+            <div class="pay-box">
+              <div class="pay-title">محفظة فودافون كاش</div>
+              <div class="pay-val">01207878060</div>
+              <button type="button" class="copy-btn" onclick="copyValue('01207878060', this)">نسخ الرقم</button>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 1.5rem;">
+            <label>طريقة الدفع التي تم التحويل بها:</label>
+            <select id="paymentMethod" required>
+              <option value="إنستاباي (InstaPay)">إنستاباي (InstaPay)</option>
+              <option value="فودافون كاش (Vodafone Cash)">فودافون كاش (Vodafone Cash)</option>
+              <option value="دفع كاش في مقر الجيم">دفع كاش في مقر الجيم</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- صندوق التعليمات الهام بدلاً من رفع الصورة -->
+        <div class="instructions-box">
+          <h4>📌 تعليمات هامة جداً لإتمام الاشتراك:</h4>
+          <p>
+            1. بعد تحويل المبلغ عبر إنستاباي أو فودافون كاش، التقط لقطة شاشة <strong>(Screenshot)</strong> لعملية التحويل.<br>
+            2. اضغط على زر <strong>"إرسال وتأكيد الحجز عبر واتساب"</strong> بالأسفل ليفتح محادثة الواتساب مع الجيم.<br>
+            3. <strong>قم بإرسال صورة التحويل (الاسكرين) مباشرة في الشات</strong> مع الرسالة لتفعيل اشتراكك وطباعة كارتك فوراً.
+          </p>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; padding: 1.1rem; font-size: 1.25rem;">
+          إرسال وتأكيد الحجز عبر واتساب
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+    const CARD_FEE = 25;
+    const DIET_FEE = 500;
+
+    // قراءة الباقة والسعر من رابط الصفحة تلقائياً
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const planParam = urlParams.get('plan');
+      const priceParam = urlParams.get('price');
+
+      if (planParam && priceParam) {
+        document.getElementById('selectedPlan').value = decodeURIComponent(planParam);
+        document.getElementById('selectedBasePrice').value = priceParam;
+      }
+      calcTotal();
+    });
+
+    function calcTotal() {
+      const base = parseFloat(document.getElementById('selectedBasePrice').value) || 0;
+      const hasDiet = document.getElementById('dietAddon').checked;
+      const total = base + CARD_FEE + (hasDiet ? DIET_FEE : 0);
+
+      document.getElementById('displayBasePrice').textContent = base + ' ج.م';
+      document.getElementById('dietRow').style.display = hasDiet ? 'flex' : 'none';
+      document.getElementById('displayTotalPrice').textContent = total + ' ج.م';
+
+      return { base, total, hasDiet };
+    }
+
+    function copyValue(text, btn) {
+      navigator.clipboard.writeText(text).then(() => {
+        const old = btn.textContent;
+        btn.textContent = 'تم النسخ!';
+        btn.style.color = 'var(--primary)';
+        btn.style.borderColor = 'var(--primary)';
+        setTimeout(() => {
+          btn.textContent = old;
+          btn.style.color = '#fff';
+          btn.style.borderColor = '#444';
+        }, 2000);
+      });
+    }
+
+    // إرسال البيانات للواتساب بدون أي تعقيد
+    document.getElementById('standaloneForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const plan = document.getElementById('selectedPlan').value;
+      const { base, total, hasDiet } = calcTotal();
+      const name = document.getElementById('applicantName').value.trim();
+      const phone = document.getElementById('applicantPhone').value.trim();
+      const goal = document.getElementById('applicantGoal').value;
+      const level = document.getElementById('applicantLevel').value;
+      const paymentMethod = document.getElementById('paymentMethod').value;
+
+      const selectedDays = [];
+      document.querySelectorAll('input[name="days"]:checked').forEach(cb => selectedDays.push(cb.value));
+      const daysStr = selectedDays.length > 0 ? selectedDays.join('، ') : 'مرن / غير محدد';
+
+      // رسالة الواتساب بدون أي سيرة عن لينكات صور
+      const message = `*طلب اشتراك جديد - HOIST GYM* 🏋️‍♂️🔥
+----------------------------------
+👤 *الاسم:* ${name}
+📱 *الهاتف:* ${phone}
+🏆 *الباقة:* ${plan} (${base} ج.م)
+💳 *رسوم كارت الدخول:* 25 ج.م
+🥗 *نظام غذائي مخصص:* ${hasDiet ? 'نعم مطلوب (+500 ج.م)' : 'لا'}
+💰 *المبلغ الإجمالي المحول:* ${total} ج.م
+🎯 *الهدف التدريبي:* ${goal}
+📊 *المستوى:* ${level}
+🗓️ *أيام التمرين:* ${daysStr}
+🏦 *طريقة التحويل:* ${paymentMethod}
+----------------------------------
+سأقوم بإرسال سكرين شوت التحويل الآن لتأكيد الدفع وتفعيل الكارت!`;
+
+      const targetNumber = '201207878060';
+      const whatsappUrl = `https://wa.me/${targetNumber}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappUrl, '_blank');
+    });
+  </script>
+</body>
+</html>
